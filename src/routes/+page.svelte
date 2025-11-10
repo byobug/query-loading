@@ -3,9 +3,10 @@
 
     const isALoading = $derived(queryA().loading);
 	const b = queryB();
+    const isBLoading = $derived(b.loading);
 
     $inspect(isALoading, "A loading");
-    $inspect(b.loading, "B loading");
+    $inspect(isBLoading, "B loading");
 
 </script>
 
@@ -13,4 +14,4 @@
 
 
 <p>A: {isALoading ? "A Loading..." : queryA().current}</p>
-<p>B: {b.loading ? "B Loading..." : b.current}</p>
+<p>B: {isBLoading ? "B Loading..." : b.current}</p>
